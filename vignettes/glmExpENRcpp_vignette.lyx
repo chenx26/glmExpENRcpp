@@ -113,21 +113,21 @@ Generalized Linear Models For Exponential Distributions
 
 \begin_layout Standard
 The theory and methodology of generalized linear models (GLM's) is well
- established for independent observations 
+ established for independent observations
 \begin_inset Formula $Y_{1},Y_{2},\cdots,Y_{N}$
 \end_inset
 
- whose mean values are 
+ whose mean values are
 \begin_inset Formula $\mu_{1},\mu_{2},\cdots,\mu_{N}$
 \end_inset
 
- and whose distributions are members of the 
+ and whose distributions are members of the
 \emph on
 exponential families
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 f(y_{k};\theta_{k})=\exp\left\{ (y_{k}\theta_{k}-b(\theta_{k}))/a(\phi_{k})+c(y_{k},\phi_{k})\right\} \quad k=1,2,\cdots,N
 \end{equation}
@@ -139,15 +139,15 @@ f(y_{k};\theta_{k})=\exp\left\{ (y_{k}\theta_{k}-b(\theta_{k}))/a(\phi_{k})+c(y_
 
 \begin_layout Standard
 \noindent
-along with a link function 
+along with a link function
 \begin_inset Formula $g$
 \end_inset
 
- from the 
+ from the
 \begin_inset Formula $\mu_{k}$
 \end_inset
 
-to a linear model form 
+to a linear model form
 \begin_inset Formula $\boldsymbol{x}_{k}^{\prime}\boldsymbol{\beta}$
 \end_inset
 
@@ -155,7 +155,7 @@ to a linear model form
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 g(\mu_{k})=\boldsymbol{x}_{k}^{\prime}\boldsymbol{\beta}=\eta_{k}.
 \end{equation}
@@ -166,27 +166,27 @@ g(\mu_{k})=\boldsymbol{x}_{k}^{\prime}\boldsymbol{\beta}=\eta_{k}.
 \end_layout
 
 \begin_layout Standard
-The form stated above with 
+The form stated above with
 \begin_inset Formula $y_{k}$
 \end_inset
 
- in the first term in the exponent rather than some function 
+ in the first term in the exponent rather than some function
 \begin_inset Formula $a(y_{k})$
 \end_inset
 
- is called the 
+ is called the
 \emph on
 canonical
 \emph default
- form, and 
+ form, and
 \begin_inset Formula $\theta_{k}$
 \end_inset
 
- is called the 
+ is called the
 \emph on
 natural
 \emph default
- 
+
 \emph on
 parameter
 \emph default
@@ -207,7 +207,7 @@ Other authors use slightly different but equivalent mathemtatical forms
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 \mu_{k}=E(Y_{k})=b'(\theta_{k})
 \end{equation}
@@ -218,7 +218,7 @@ Other authors use slightly different but equivalent mathemtatical forms
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \begin{equation}
 var(Y_{k})=b^{\prime\prime}(\theta_{k})a(\phi_{k}).
 \end{equation}
@@ -233,16 +233,16 @@ Maximum Likelihood Model Estimation for GLM
 \end_layout
 
 \begin_layout Standard
-The likelihood function for observed values 
+The likelihood function for observed values
 \begin_inset Formula $y_{1},y_{2},\cdots,y_{N}$
 \end_inset
 
- of the independt set 
+ of the independt set
 \begin_inset Formula $Y_{1},Y_{2},\cdots,Y_{N}$
 \end_inset
 
- is 
-\begin_inset Formula 
+ is
+\begin_inset Formula
 \[
 L(\boldsymbol{y};\boldsymbol{\theta})=\prod_{k=1}^{N}f(y_{k};\theta_{k})
 \]
@@ -257,7 +257,7 @@ and the log-likelihood function is
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 l(\boldsymbol{y};\boldsymbol{\theta})=\log\prod_{k=1}^{N}f(y_{k};\theta_{k})=\sum_{k=1}^{N}\log f(y_{k};\theta_{k})=\sum_{k=1}^{N}l(y_{k};\theta_{k}).
 \]
@@ -301,7 +301,7 @@ The elastic net regularization not only addresses the porblem of choosing
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{\beta}_{Ridge}=\underset{\boldsymbol{\beta},\lambda}{\mathrm{argmin}}LL(\boldsymbol{y};\boldsymbol{\theta})+\lambda\|\boldsymbol{\beta}\|_{2}
 \]
@@ -316,7 +316,7 @@ This implies that the modeler believes there is unlikely to be particularly
  large coeffcients in the model.
  In deed, large coefficients will be penalized heavily by the L2 regularization,
  resulting in smaller values for the coefficients.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -329,7 +329,7 @@ A different kind of regularization, which became very popular in recent
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{\beta}_{LASSO}=\underset{\boldsymbol{\beta},\lambda}{\mathrm{argmin}}LL(\boldsymbol{y};\boldsymbol{\theta})+\lambda\|\boldsymbol{\beta}\|_{1}
 \]
@@ -340,16 +340,16 @@ A different kind of regularization, which became very popular in recent
 \end_layout
 
 \begin_layout Standard
-The sparsity of 
+The sparsity of
 \begin_inset Formula $\hat{\beta}_{LASSO}$
 \end_inset
 
- is controlled by adjusting the value of 
+ is controlled by adjusting the value of
 \begin_inset Formula $\lambda$
 \end_inset
 
 .
- One thing to note is that even thought 
+ One thing to note is that even thought
 \begin_inset Formula $\hat{\beta}_{LASSO}$
 \end_inset
 
@@ -362,11 +362,11 @@ The latest development in regularization comes in the form of Elastic Net
  (EN).
  It combines Ridge Regression and LASSO regression by using weighted sum
  of L1 nrom and L2 norm of the coeffcients as the penalty function.
- 
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \hat{\beta}_{EN}=\underset{\boldsymbol{\beta},\lambda}{\mathrm{argmin}}LL(\boldsymbol{y};\boldsymbol{\theta})+\lambda(\alpha\|\boldsymbol{\beta}\|_{1}+(1-\alpha)\|\boldsymbol{\beta}\|_{2})
 \]
@@ -377,7 +377,7 @@ The latest development in regularization comes in the form of Elastic Net
 \end_layout
 
 \begin_layout Standard
-The the parameter 
+The the parameter
 \begin_inset Formula $\alpha\in[0,1]$
 \end_inset
 
@@ -395,7 +395,7 @@ The proximal gradident descent algorithm is designed to solve problems of
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \min_{x}\quad f(x)+g(x)
 \]
@@ -406,15 +406,15 @@ The proximal gradident descent algorithm is designed to solve problems of
 \end_layout
 
 \begin_layout Standard
-where 
+where
 \begin_inset Formula $f(x)$
 \end_inset
 
- and 
+ and
 \begin_inset Formula $g(x)$
 \end_inset
 
- are closed proper convex and 
+ are closed proper convex and
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -423,7 +423,7 @@ where
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 x^{k+1}=\mathrm{prox}_{t^{k}g}(x^{k}-\nabla f(x))
 \]
@@ -438,7 +438,7 @@ where
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \mathrm{prox}_{tg}(v)=\min_{x}\quad f(x)+\dfrac{1}{2t}||x-v||_{2}^{2}
 \]
@@ -449,21 +449,21 @@ where
 \end_layout
 
 \begin_layout Standard
-For our problem, 
+For our problem,
 \begin_inset Formula $f(x)$
 \end_inset
 
  would be the sum negative log-likelihood of the exponential response variables
- and the L2 regularization and 
+ and the L2 regularization and
 \begin_inset Formula $g(x)$
 \end_inset
 
  would be the L1 regularization.
- Therefore, 
+ Therefore,
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \begin{aligned}\mathrm{prox}_{tg}(v)=\mathrm{prox}_{t||x||_{1}}(v) & =\mathrm{argmin}_{x}\left(||x||_{1}+\dfrac{1}{2t}||x-v||_{2}^{2}\right)\\
  & =\begin{cases}
@@ -508,7 +508,7 @@ libary(devtools)
 
 \begin_layout Plain Layout
 
-install_github("chenx26/glmnetRcpp")
+install_github("chenx26/glmExpENRcpp")
 \end_layout
 
 \end_inset
@@ -518,7 +518,7 @@ install_github("chenx26/glmnetRcpp")
 
 \begin_layout Subsection
 Structure of the Sample Code for Timings and Results Comparison between
- glmnetRcpp and H2O
+ glmExpENRcpp and H2O
 \end_layout
 
 \begin_layout Standard
@@ -529,7 +529,7 @@ To compare our implementation with H2O, we simulate test data and then use
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
+\begin_inset Formula
 \[
 b_{i}\sim exp(\lambda_{i})
 \]
@@ -541,7 +541,7 @@ b_{i}\sim exp(\lambda_{i})
 
 \begin_layout Standard
 where
-\begin_inset Formula 
+\begin_inset Formula
 \[
 \log\lambda_{i}=-A_{i}*x
 \]
@@ -556,25 +556,25 @@ The test data set is generated by the following steps:
 \end_layout
 
 \begin_layout Enumerate
-Randomly genereate the independent variable matrix A of size 
+Randomly genereate the independent variable matrix A of size
 \begin_inset Formula $n\times p$
 \end_inset
 
-, where 
+, where
 \begin_inset Formula $n$
 \end_inset
 
- is the number of observations, 
+ is the number of observations,
 \begin_inset Formula $p$
 \end_inset
 
  is the number of independent variables.
- 
+
 \end_layout
 
 \begin_layout Enumerate
 Randomly generate the true coefficient of the model x.true, which is a vector
- of length 
+ of length
 \begin_inset Formula $p$
 \end_inset
 
@@ -582,7 +582,7 @@ Randomly generate the true coefficient of the model x.true, which is a vector
 \end_layout
 
 \begin_layout Enumerate
-Compute the vector of parameters for the exponential distributions, 
+Compute the vector of parameters for the exponential distributions,
 \begin_inset Formula $\lambda=\mathrm{exp(-}A*\mathrm{x.true})$
 \end_inset
 
@@ -590,12 +590,12 @@ Compute the vector of parameters for the exponential distributions,
 \end_layout
 
 \begin_layout Enumerate
-For each 
+For each
 \begin_inset Formula $\lambda_{i}$
 \end_inset
 
 , generate a sample from the exponential distribution.
- This is the response variable 
+ This is the response variable
 \begin_inset Formula $b_{i}$
 \end_inset
 
@@ -604,7 +604,7 @@ For each
 
 \begin_layout Standard
 Once the test data is generated, we apply glmnet_exp() and h2o.glm() to compute
- the estimated coeffcients 
+ the estimated coeffcients
 \begin_inset Formula $x$
 \end_inset
 
@@ -612,7 +612,7 @@ Once the test data is generated, we apply glmnet_exp() and h2o.glm() to compute
 \end_layout
 
 \begin_layout Subsection
-Sample Code for Timings and Results Comparison between glmnetRcpp and H2O
+Sample Code for Timings and Results Comparison between glmExpENRcpp and H2O
 \end_layout
 
 \begin_layout Standard
@@ -645,7 +645,7 @@ rm(list = ls())
 
 \begin_layout Plain Layout
 
-library(glmnetRcpp)
+library(glmExpENRcpp)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1030,7 +1030,7 @@ time_single = system.time({cpp_single_res_list = foreach(i = 1:length(params_lis
 
 \begin_layout Plain Layout
 
-                                            .packages = 'glmnetRcpp') %do%
+                                            .packages = 'glmExpENRcpp') %do%
  {
 \end_layout
 
@@ -1066,7 +1066,7 @@ time_multi = system.time({cpp_multi_res_list = foreach(i = 1:length(params_list)
 
 \begin_layout Plain Layout
 
-                                            .packages = 'glmnetRcpp') %dopar%
+                                            .packages = 'glmExpENRcpp') %dopar%
  {
 \end_layout
 
@@ -1219,11 +1219,11 @@ data.frame(x.true = x.true,
 \end_layout
 
 \begin_layout Subsection
-Testing glmnetRcpp for estimating the standard errors of sample mean
+Testing glmExpENRcpp for estimating the standard errors of sample mean
 \end_layout
 
 \begin_layout Standard
-The following code chunk tests using glmnetRcpp to estimate the standard
+The following code chunk tests using glmExpENRcpp to estimate the standard
  error of sample for IID normal data.
 \end_layout
 
@@ -1244,7 +1244,7 @@ rm(list=ls())
 
 \begin_layout Plain Layout
 
-library(glmnetRcpp)
+library(glmExpENRcpp)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1393,7 +1393,7 @@ myperiodogram=function(data,max.freq=0.5){
 
 \begin_layout Plain Layout
 
-#' @author Xin Chen, 
+#' @author Xin Chen,
 \backslash
 email{chenx26@uw.edu}
 \end_layout
@@ -1499,7 +1499,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1509,7 +1509,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        # Step 1: compute the periodograms 
+        # Step 1: compute the periodograms
 \end_layout
 
 \begin_layout Plain Layout
@@ -1529,7 +1529,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1550,7 +1550,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1575,7 +1575,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1585,7 +1585,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1615,7 +1615,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1625,7 +1625,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1640,7 +1640,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1683,7 +1683,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-nobs = 50 
+nobs = 50
 \end_layout
 
 \begin_layout Plain Layout
@@ -1753,7 +1753,7 @@ test.mat = matrix(rnorm(nobs * n.mcsim, mean = mu, sd = StdDev), nrow = nobs)
 
 \begin_layout Plain Layout
 
-res.glmnet_exp = apply(test.mat, 2, 
+res.glmnet_exp = apply(test.mat, 2,
 \end_layout
 
 \begin_layout Plain Layout
@@ -1847,7 +1847,7 @@ data.frame(theoretical.se =StdDev/sqrt(nobs), # theoretical SE of mean is
 \end_layout
 
 \begin_layout Subsection
-Estimating the standard error of sample sharpe ratio using glmnetRcpp
+Estimating the standard error of sample sharpe ratio using glmExpENRcpp
 \end_layout
 
 \begin_layout Standard
@@ -1867,7 +1867,7 @@ rm(list=ls())
 
 \begin_layout Plain Layout
 
-library(glmnetRcpp)
+library(glmExpENRcpp)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2021,7 +2021,7 @@ myperiodogram=function(data,max.freq=0.5){
 
 \begin_layout Plain Layout
 
-#' @author Xin Chen, 
+#' @author Xin Chen,
 \backslash
 email{chenx26@uw.edu}
 \end_layout
@@ -2102,7 +2102,7 @@ mu.IF=function(data,...){
 
 \begin_layout Plain Layout
 
-#' @author Xin Chen, 
+#' @author Xin Chen,
 \backslash
 email{chenx26@uw.edu}
 \end_layout
@@ -2194,7 +2194,7 @@ SR=function(data,rf=0){
 
 \begin_layout Plain Layout
 
-#' @author Xin Chen, 
+#' @author Xin Chen,
 \backslash
 email{chenx26@uw.edu}
 \end_layout
@@ -2310,7 +2310,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2320,7 +2320,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        # Step 1: compute the periodograms 
+        # Step 1: compute the periodograms
 \end_layout
 
 \begin_layout Plain Layout
@@ -2340,7 +2340,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2361,7 +2361,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2386,7 +2386,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2396,7 +2396,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2426,7 +2426,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2436,7 +2436,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2451,7 +2451,7 @@ SE.glmnet_exp=function(data, d=7, alpha=0.5, keep=1){
 
 \begin_layout Plain Layout
 
-        
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2494,7 +2494,7 @@ set.seed(20180828)
 
 \begin_layout Plain Layout
 
-nobs = 50 
+nobs = 50
 \end_layout
 
 \begin_layout Plain Layout
@@ -2564,7 +2564,7 @@ test.mat = matrix(rnorm(nobs * n.mcsim, mean = mu, sd = StdDev), nrow = nobs)
 
 \begin_layout Plain Layout
 
-res.glmnet_exp = apply(test.mat, 2, 
+res.glmnet_exp = apply(test.mat, 2,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2603,7 +2603,7 @@ res.glmnet_exp = apply(test.mat, 2,
 
 \begin_layout Plain Layout
 
-res.nse = apply(test.mat, 2, 
+res.nse = apply(test.mat, 2,
 \end_layout
 
 \begin_layout Plain Layout

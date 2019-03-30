@@ -1,6 +1,6 @@
 rm(list = ls())
 library(h2o)
-library(glmnetRcpp)
+library(glmExpENRcpp)
 
 # negative log likelihood of exponential distribution
 
@@ -605,14 +605,14 @@ registerDoParallel(cl)
 
 
 system.time({cpp_foreach_res_list = foreach(i = 1:length(params_list),
-                               .packages = 'glmnetRcpp') %do% {
+                               .packages = 'glmExpENRcpp') %do% {
                                  x = params_list[[i]]
                                  fitGlmCv(x[["A"]], x[["b"]], x[["alpha"]])
 }
 })
 
 system.time({cpp_foreach_res_list = foreach(i = 1:length(params_list),
-                                            .packages = 'glmnetRcpp') %dopar% {
+                                            .packages = 'glmExpENRcpp') %dopar% {
                                               x = params_list[[i]]
                                               fitGlmCv(x[["A"]], x[["b"]], x[["alpha"]])
                                             }

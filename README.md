@@ -14,9 +14,9 @@ In the proposal for the GSoC project for standard errors 2017, the following 7 d
 
 ## Status of Proposed Deliverables
 
-Of the 7 proposed deliverables, the first 5 have been completed. See the GitHub repo https://github.com/chenx26/glmnetRcpp for the completed package. 
+Of the 7 proposed deliverables, the first 5 have been completed. See the GitHub repo https://github.com/chenx26/glmExpENRcpp for the completed package. 
 
-For the last two deliverables, preliminary results have been implemented for sample mean and Sharpe ratio and the performances of our new method have been satisfactory. See section 2.4 and 2.5 of the vignette at https://github.com/chenx26/glmnetRcpp/blob/master/vignettes/glmnetRcpp_vignette.pdf. I expect to complete these deliverables during September2017.
+For the last two deliverables, preliminary results have been implemented for sample mean and Sharpe ratio and the performances of our new method have been satisfactory. See section 2.4 and 2.5 of the vignette at https://github.com/chenx26/glmExpENRcpp/blob/master/vignettes/glmExpENRcpp_vignette.pdf. I expect to complete these deliverables during September2017.
 
 
 # INSTALLATION
@@ -24,7 +24,7 @@ Sys.setenv( "PKG_CXXFLAGS"="-std=c++14" )
 
 libary(devtools)
 
-install_github("chenx26/glmnetRcpp")
+install_github("chenx26/glmExpENRcpp")
 
 # Vignette
 See the Vignette folder for timings and accuracy

@@ -1,7 +1,7 @@
 rm(list = ls())
 
 ######### load package
-library(glmnetRcpp)
+library(glmExpENRcpp)
 library(h2o)
 
 ######### helper function
@@ -78,14 +78,14 @@ cl <- makeCluster(3)
 registerDoParallel(cl)
 
 time_single = system.time({cpp_single_res_list = foreach(i = 1:length(params_list),
-                                            .packages = 'glmnetRcpp') %do% {
+                                            .packages = 'glmExpENRcpp') %do% {
                                               x = params_list[[i]]
                                               fitGlmCv(x[["A"]], x[["b"]], x[["alpha"]])
                                             }
 })
 
 time_multi = system.time({cpp_multi_res_list = foreach(i = 1:length(params_list),
-                                            .packages = 'glmnetRcpp') %dopar% {
+                                            .packages = 'glmExpENRcpp') %dopar% {
                                               x = params_list[[i]]
                                               fitGlmCv(x[["A"]], x[["b"]], x[["alpha"]])
                                             }
